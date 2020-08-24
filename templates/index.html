@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+<h1>Get the sentiment of the message:</h1>
+
+<form role="form" method="post" action="/predict/sentiment">
+    <div class="row">
+        <div class="col-md-12">
+            <textarea cols="4" class="form-control" name="sentiment_text" required type="input" placeholder="Enter the paragraph" value="{{input}}">{{input}}</textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </div>
+    </div>
+
+</form>
+
+<!--<form role="form" method="post" action="login">-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-12">-->
+<!--            <input name="usernme" class="form-control" type="text" required></input>-->
+<!--            <textarea cols="4" name="sentiment_text" required type="input" placeholder="Enter the paragraph" value="{{input}}">{{input}}</textarea>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-12">-->
+<!--            <input name="password" class="form-control" type="password" required></input>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-12">-->
+<!--            <button type="submit" class="btn btn-primary">Login</button>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</form>-->
+    <h1>{{prediction}}</h1>
+</div>
+</body>
+</html>
