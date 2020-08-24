@@ -1,10 +1,10 @@
 from flask import request, jsonify
-import tensorflow as tf
+# import tensorflow as tf
 import numpy as np
-from tensorflow.keras import backend
-from tensorflow.keras.models import load_model
+from keras import backend
+from keras.models import load_model
 from keras.preprocessing import sequence
-from tensorflow.keras.datasets import imdb
+from keras.datasets import imdb
 import os
 import json
 
