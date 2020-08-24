@@ -79,7 +79,7 @@ def sentiment():
     senti = SentimentAnalysis()
     input_msg = request.form.get('sentiment_text')
     prediction = senti.sentiment(input_msg)
-    if prediction > 0.60:
+    if prediction > 0.80:
         message = 'It is a positive message, having a score of {}'.format(prediction)
     else:
         message = 'It is a negative message, having a score of {}'.format(prediction)
